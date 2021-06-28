@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import './App.css';
 
-//test comment
+
 
 const App = ()  => {
   const [questions, setQuestions] = useState([])
