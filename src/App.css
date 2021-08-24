@@ -1,9 +1,6 @@
 .container {
-  display: grid;
-  grid-template-rows: auto auto auto auto;
+  display: flex;
   justify-content: center;
-  text-align: center;
-  margin: auto;
 }
 
 .scoreHeader {
@@ -13,10 +10,13 @@
 }
 
 .header {
-  color: hsl(52, 96%, 69%);
-  background: hsl(280, 32%, 41%);
-  border-radius: 5em;
-  text-align: center;
+  display: flex;
+  width: 30em;
+  margin: auto;
+  justify-content: center;
+  background-color: rgb(192, 64, 64);
+  border-radius: 10%;
+  border: .1em solid rgb(76, 170, 170);
 }
 
 
@@ -24,12 +24,13 @@
   color: hsl(263, 47%, 14%);
   background-color: #FFFDED;
   border-radius: 3em;
-  width: auto;
+  width: 5em;
   font-size: 2em;
+  margin: auto;
 }
 
 .title:hover {
-	background-color: hsl(280, 80%, 50%)
+	background-color: hsl(280, 28%, 29%)
 }
 
 .answer {
@@ -54,16 +55,16 @@
   background-color: hsl(53, 100%, 96%);
   color: hsl(249, 58%, 61%);
   width: 2em;
-  border-radius: 50%;
+  border-radius: 20%;
   text-align: center;
   margin: 1em auto;
 }
 
  button {
-	  color: #FFF;
-	  background-color: blue;
-	  border: 2px solid rgb(216, 2, 134);
-	  border-radius: 50%;
+	  color: hsl(147, 40%, 57%);
+	  background-color: rgb(84, 84, 192);
+	  border: 2px dashed hsl(25, 100%, 74%);
+	  border-radius: 10%;
 	  padding: 18px 36px;
 	  display: inline-block;
 	  font-family: "Lucida Console", Monaco, monospace;
@@ -74,10 +75,33 @@
 	  -webkit-transition: ease-out 0.4s;
 	  -moz-transition: ease-out 0.4s;
 	  transition: ease-out 0.4s;
+    margin: 0em 1em 1em 1em
 }
 
 button:hover {
-	  box-shadow: inset 0 100px 0 0 hsl(280, 60%, 50%);
+	  box-shadow: inset 0 100px 0 0 hsl(147, 40%, 57%);
+    color: rgb(84, 84, 192);
+	  border: 2px solid hsl(0, 50%, 47%);
+
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  font-size: 1.25em;
+
+}
+
+.hiddenQuestion {
+  color: hsl(25, 100%, 74%);
+}
+
+.hiddenQuestion:hover {
+  color: black;
+  
 }
 
 

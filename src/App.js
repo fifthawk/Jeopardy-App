@@ -52,11 +52,10 @@ const App = ()  => {
   return (
     <>
       <div><h1 className='header'>Jeopardy!</h1></div>
-      <div className = 'scoreHeader'>
+      <div className = 'container'>
 
       <div>
       <p className = 'scores'>{score}</p>
-      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
       <button type ='button' value='button' onClick ={addScore}>Player 1</button>
       </div>
 		
@@ -78,10 +77,10 @@ const App = ()  => {
 
       </div>
       <div className ='newQs'>
-      <button type ='button' value='button' onClick ={newQuestions}>New Questions!</button>
       <button type = 'button' value ='button' onClick ={resetScores}>Reset Scores</button>
+      <button type ='button' value='button' onClick ={newQuestions}>New Question!</button>
       </div>
-      <div className = 'container'>
+      <div className = 'questions'> 
       {questions.map(questions => {
         return (
           <div>
@@ -90,10 +89,11 @@ const App = ()  => {
             .toUpperCase() + s.substring(1))
             .join(' ')}
             </p>
-            <p> {questions.question}.</p>
-            <p>Question: </p>
-            <p className = 'answer'>Who/what is {questions.answer}?</p>
-            <p>{questions.value ? `$${questions.value}` : 'Double Jeopardy!'}</p>
+            <p>Answer:</p>
+            <p className = 'hiddenQuestion'> {questions.question}.</p>
+            <p>Question : </p>
+            <p className = 'answer'>{questions.answer}</p>
+            <p>{questions.value ? `$${questions.value}` : 'Daily Double!'}</p>
             <hr />
           </div>
         )
