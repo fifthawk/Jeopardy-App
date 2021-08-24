@@ -91,7 +91,7 @@ const App = ()  => {
             </p>
             <p>Answer:</p>
             <p className = 'hiddenQuestion'> {questions.question}.</p>
-            <p>Question : </p>
+            <p>Question Test: </p>
             <p className = 'answer'>{questions.answer}</p>
             <p>{questions.value ? `$${questions.value}` : 'Daily Double!'}</p>
             <hr />
